@@ -29,15 +29,20 @@ h1 {
 
 #gameboard {
   display: grid;
-  width: 500px;
-  height: 500px;
   grid-template-columns: auto auto auto;
   margin: 20px;
   background-color: #f9f9f9;
 }
 
 .block{
+  display: flex;
+  height: calc(500px/3);
+  width: calc(500px/3);
+  justify-content: center;
+  align-items: center;
   border: 1.5px solid #BEAEE2;
+  font-size: 100px;
+  text-align: center;
 }
 
 #block-1, #block-2, #block-4, #block-5, #block-3, #block-6 {
