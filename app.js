@@ -52,16 +52,16 @@ const gameController = (() => {
     boardController.checkField(index, player.marker);
     if (checkWinner(index)) {
       isOver = true;
-      h3.textContent = `${gameController.checkPlayer().name} WIN!!!!!!`
+      displayMessage(`${gameController.checkPlayer().name} WIN!!!!!!`)
       return;
     }
     else if (turn === 9) {
       isOver = true;
-      h3.innerHTML = 'It is a Draw';
+      displayMessage('It is a draw!')
       return;
     }
     turn++;
-    h3.innerHTML = `${gameController.checkPlayer().name}'s turn`
+    displayMessage(`${gameController.checkPlayer().name}'s turn`)
   }; 
 
   // Check Winning condition return boolean value
@@ -96,6 +96,10 @@ const gameController = (() => {
     boardController.resetBoard()
     isOver = false;
     h3.innerHTML = "X's Turn"
+  }
+
+  const displayMessage = (message) => {
+    h3.textContent = message
   }
 
   return { 

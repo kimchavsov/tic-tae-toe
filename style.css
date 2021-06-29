@@ -65,6 +65,21 @@ h1 {
 #block-3, #block-6, #block-9 {
   border-right: 2px solid #BEAEE2;
 }
+/* reset button */
+#reset {
+  margin-bottom: 30px;
+  width: 180px;
+  height: 70px;
+  font-size: 25px;
+  background-color: #E8F6EF;
+  color: #4C4C6D;
+  border:1px solid #BEAEE2;
+  font-weight: 700;
+}
+
+#reset:hover {
+  background-color: #c1e2d2;
+}
 
 @media only screen and (max-width: 1000px) {
   h3 {
@@ -75,6 +90,11 @@ h1 {
     padding-top:10px;
     height: 100px;
     font-size: 80px;
+  }
+  #reset {
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
   }
   
 }
